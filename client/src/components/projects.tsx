@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Truck, MessageSquare, FileText, Server, Database, Zap } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -8,24 +8,21 @@ export default function Projects() {
     {
       title: "TMS (Transporter Management System)",
       description: "Currently developing a comprehensive transporter management system to optimize logistics and fleet operations with real-time tracking, automated invoicing, and customer management features.",
-      icon: Truck,
-      gradient: "from-blue-500 to-blue-700",
+      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
       technologies: ["Spring Boot", "Java", "MongoDB"],
       colors: ["bg-primary/20 text-primary", "bg-accent/20 text-accent", "bg-green-500/20 text-green-400"]
     },
     {
       title: "Samadhan – Grievance Portal",
       description: "The grievance portal facilitates complaint submission, tracking, and resolution, with streamlined member management and enhanced user administration features for improved usability.",
-      icon: MessageSquare,
-      gradient: "from-green-500 to-green-700",
+      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
       technologies: ["Spring Boot", "Java", "REST APIs"],
       colors: ["bg-primary/20 text-primary", "bg-accent/20 text-accent", "bg-yellow-500/20 text-yellow-400"]
     },
     {
       title: "Logipod",
       description: "E-way bill creation and management system integrated with the GSTIN portal. Developed 6 modules for creating and managing e-way bills, automating 30% of operations with task schedulers.",
-      icon: FileText,
-      gradient: "from-purple-500 to-purple-700",
+      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
       technologies: ["Java", "GSTIN API", "Task Schedulers"],
       colors: ["bg-primary/20 text-primary", "bg-accent/20 text-accent", "bg-red-500/20 text-red-400"]
     },
@@ -44,12 +41,12 @@ export default function Projects() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="glass-card rounded-2xl overflow-hidden skill-card transition-all duration-300 border-slate-700/50">
-              <div className="p-8 pb-0">
-                <div className={`w-24 h-24 rounded-3xl bg-gradient-to-br ${project.gradient} flex items-center justify-center mb-6 shadow-2xl`}>
-                  <project.icon className="w-12 h-12 text-white" />
-                </div>
-              </div>
-              <CardContent className="p-6 pt-0">
+              <img 
+                src={project.image} 
+                alt={project.title}
+                className="w-full h-48 object-cover" 
+              />
+              <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-white mb-3">{project.title}</h3>
                 <p className="text-slate-300 mb-4 text-sm leading-relaxed">
                   {project.description}
