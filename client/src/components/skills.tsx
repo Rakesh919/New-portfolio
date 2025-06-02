@@ -25,14 +25,18 @@ export default function Skills() {
   }, []);
 
   const skills = [
-    { name: "Java", icon: Code, level: 95, color: "from-orange-500 to-red-600" },
-    { name: "Spring Boot", icon: SiSpring, level: 90, color: "from-green-500 to-emerald-600" },
-    { name: "MongoDB", icon: SiMongodb, level: 85, color: "from-green-400 to-green-700" },
-    { name: "JavaScript", icon: SiJavascript, level: 75, color: "from-yellow-400 to-orange-500" },
-    { name: "Node.js", icon: Server, level: 70, color: "from-green-600 to-green-800" },
-    { name: "SQL", icon: Database, level: 88, color: "from-blue-500 to-blue-700" },
-    { name: "REST APIs", icon: Globe, level: 92, color: "from-cyan-500 to-blue-600" },
-    { name: "Git", icon: SiGit, level: 80, color: "from-red-500 to-pink-600" }
+    { icon: Code, name: "Java", category: "Programming Language", color: "text-orange-400", level: 90 },
+    { icon: SiJavascript, name: "JavaScript", category: "Programming Language", color: "text-yellow-400", level: 70 },
+    { icon: SiSpring, name: "Spring Boot", category: "Framework", color: "text-green-400", level: 95 },
+    { icon: SiSpring, name: "Spring MVC", category: "Framework", color: "text-green-500", level: 85 },
+    { icon: Database, name: "JPA/Hibernate", category: "ORM", color: "text-purple-400", level: 80 },
+    { icon: Server, name: "Node.js/Express", category: "Runtime/Framework", color: "text-green-600", level: 70 },
+    { icon: SiMongodb, name: "MongoDB", category: "NoSQL Database", color: "text-green-500", level: 90 },
+    { icon: Database, name: "SQL Databases", category: "Relational DB", color: "text-blue-400", level: 85 },
+    { icon: SiGit, name: "Git/GitHub", category: "Version Control", color: "text-red-500", level: 85 },
+    { icon: Server, name: "RESTful APIs", category: "Web Services", color: "text-cyan-400", level: 95 },
+    { icon: Server, name: "Microservices", category: "Architecture", color: "text-indigo-400", level: 80 },
+    { icon: Code, name: "Data Structures", category: "Core Concepts", color: "text-pink-400", level: 85 },
   ];
 
   const stats = [
@@ -61,39 +65,24 @@ export default function Skills() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-20">
           {skills.map((skill, index) => {
             const IconComponent = skill.icon;
             return (
               <Card 
                 key={index} 
-                className={`glass-card rounded-2xl skill-card transition-all duration-700 border-slate-700/50 hover:border-slate-500/50 group transform ${
+                className={`glass-card p-6 rounded-xl text-center skill-card transition-all duration-700 border-border transform ${
                   isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
                 }`} 
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <CardContent className="p-6 text-center">
-                  <div className="relative mb-6">
-                    <div className={`w-20 h-20 mx-auto rounded-2xl bg-gradient-to-br ${skill.color} flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300`}>
-                      <IconComponent className="w-10 h-10 text-white" />
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <CardContent className="p-0">
+                  <div className="relative mb-4">
+                    <IconComponent className={`text-4xl ${skill.color} mx-auto animate-float hover:scale-110 transition-transform duration-300`} style={{ animationDelay: `${index * 0.2}s` }} />
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent rounded-full blur-xl opacity-50 animate-pulse-slow"></div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-primary transition-colors duration-300">{skill.name}</h3>
-                  
-                  {/* Skill Level Progress */}
-                  <div className="relative mb-2">
-                    <div className="w-full bg-slate-800 rounded-full h-2">
-                      <div 
-                        className={`h-2 bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 ease-out`}
-                        style={{ 
-                          width: isVisible ? `${skill.level}%` : '0%',
-                          transitionDelay: `${800 + (index * 100)}ms`
-                        }}
-                      ></div>
-                    </div>
-                  </div>
-                  <div className="text-slate-400 text-sm font-medium">{skill.level}%</div>
+                  <h3 className="text-lg font-semibold text-foreground mb-2 hover:text-primary transition-colors duration-300">{skill.name}</h3>
+                  <p className="text-muted-foreground text-sm">{skill.category}</p>
                 </CardContent>
               </Card>
             );
