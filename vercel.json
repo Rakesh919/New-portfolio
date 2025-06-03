@@ -1,7 +1,6 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "ignoreCommand": "echo 'Ignore server folder'",
   "functions": {
     "api/**.ts": {
       "runtime": "edge"
