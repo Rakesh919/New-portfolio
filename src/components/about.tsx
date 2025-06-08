@@ -25,9 +25,9 @@ export default function About() {
               <CardContent className="p-0">
                 <h3 className="text-2xl font-semibold mb-4 text-foreground">My Journey</h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Backend Developer with 1+ year of experience designing scalable APIs and enhancing system performance. 
-                  Boosted database efficiency by 40% at OneTick Technologies, improving application speed and reliability 
-                  for seamless user experiences.
+                Backend Developer with 1+ year of experience designing scalable APIs and enhancing system performance.
+                Improved database efficiency by 40%, boosting application speed and reliability for seamless user experiences.
+                Skilled in optimizing backend logic and building robust data-driven solutions.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   I specialize in building RESTful APIs, optimizing database queries, and integrating efficient 
