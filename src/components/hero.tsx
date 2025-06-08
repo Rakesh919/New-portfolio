@@ -22,8 +22,7 @@ export default function Hero() {
           </h1>
           <h2 className="text-2xl md:text-3xl text-muted-foreground mb-8 font-light animate-fade-in-up" style={{ animationDelay: '0.5s' }}>Backend Developer</h2>
           <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '1s' }}>
-            Backend Developer with 1+ year of experience designing scalable APIs and enhancing system performance. 
-            Boosted database efficiency by 40% at OneTick Technologies.
+            Backend Developer with 1+ year of experience designing scalable APIs and enhancing system performance. Boosted database efficiency by 40%, improving application speed and reliability for seamless user experiences.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '1.5s' }}>
             <Button
