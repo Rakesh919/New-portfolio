@@ -1,5 +1,5 @@
 import * as React from "react";
-import { SiSpring, SiMongodb, SiGit } from "react-icons/si";
+import { SiSpring, SiMongodb, SiGit, SiRedis, SiApachekafka, SiDocker, SiJunit5, SiTestinglibrary, SiAngular, SiJenkins } from "react-icons/si";
 import { Code2, Database, Server, Zap, Globe, Layers, TreePine, Share2, Link2, Network, Rocket, Layout } from 'lucide-react';
 import { motion } from "framer-motion";
 
@@ -62,6 +62,14 @@ const skills = [
   { icon: Server, name: "Node.js/Express", category: "Runtime/Framework", color: "#22d3ee", level: 70 },
   { icon: SiMongodb, name: "MongoDB", category: "NoSQL Database", color: "#10b981", level: 90 },
   { icon: Database, name: "SQL Databases", category: "Relational DB", color: "#60a5fa", level: 85 },
+  { icon: SiRedis, name: "Redis", category: "In-memory Data Store", color: "#dc2626", level: 80 },
+  { icon: SiApachekafka, name: "Kafka", category: "Streaming Platform", color: "#f59e0b", level: 80 },
+  { icon: SiDocker, name: "Docker", category: "Containerization", color: "#0ea5e9", level: 80 },
+  { icon: SiAngular, name: "Angular", category: "Frontend Framework", color: "#dd0031", level: 80 },
+  { icon: SiJenkins, name: "Jenkins", category: "CI/CD", color: "#d24839", level: 75 },
+  { icon: SiJunit5, name: "JUnit", category: "Testing", color: "#22c55e", level: 75 },
+  { icon: SiTestinglibrary, name: "Mockito", category: "Testing", color: "#0f766e", level: 70 },
+  { icon: Layout, name: "System Design", category: "Architecture", color: "#8b5cf6", level: 85 },
   { icon: SiGit, name: "Git/GitHub", category: "Version Control", color: "#ef4444", level: 85 },
   { icon: Share2, name: "RESTful APIs", category: "Web Services", color: "#06b6d4", level: 95 },
   { icon: Network, name: "Microservices", category: "Architecture", color: "#818cf8", level: 80 },
@@ -69,8 +77,8 @@ const skills = [
 ];
 
 const stats = [
-  { label: 'Years Experience', value: '1+', icon: 'Zap' },
-  { label: 'Projects Completed', value: '3+', icon: 'Server' },
+  { label: 'Years Experience', value: '2+', icon: 'Zap' },
+  { label: 'Projects Completed', value: '5+', icon: 'Server' },
   { label: 'API Endpoints Built', value: '50+', icon: 'Globe' },
   { label: 'Database Optimization', value: '40%', icon: 'Database' }
 ];

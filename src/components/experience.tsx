@@ -28,6 +28,19 @@ export default function Experience() {
 
   const experiences = [
     {
+      title: "Full Stack Developer (Java & Angular)",
+      company: "Humanitics Dimensions",
+      location: "On-site",
+      duration: "Nov 2025 – Present",
+      type: "Full-time",
+      achievements: [
+        "Built RESTful APIs for smooth front-end integration",
+        "Optimized MongoDB queries, cutting execution time by 40%",
+        "Integrated APIs for efficient module-to-module communication"
+      ],
+      technologies: ["Java", "Angular", "PostgreSQL", "REST APIs"]
+    },
+    {
       title: "Backend Developer (Java & Node.js)",
       company: "OneTick Technologies",
       location: "On-site",
@@ -38,7 +51,7 @@ export default function Experience() {
         "Optimized MongoDB queries, cutting execution time by 40%",
         "Integrated APIs for efficient module-to-module communication"
       ],
-      technologies: ["Java", "Node.js", "MongoDB", "REST APIs"]
+      technologies: ["Java", "Node.js", "MongoDB", "Microservices"]
     },
     {
       title: "Java Intern",
