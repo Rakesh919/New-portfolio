@@ -11,7 +11,7 @@ export default function Hero() {
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-0">
       {/* 3D background — sits behind everything */}
       <Hero3DParticles />
-
+ 
       {/* Gradient overlays */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-muted to-background dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 opacity-80" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(59,130,246,0.1),transparent_50%)] animate-pulse-slow" />
