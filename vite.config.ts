@@ -23,6 +23,16 @@ export default defineConfig({
       "@assets": path.resolve(import.meta.dirname, "public/assets"),
     },
   },
+  server: {
+    host: "0.0.0.0",
+    port: 5174,
+    strictPort: true,
+  },
+  preview: {
+    host: "0.0.0.0",
+    port: 5174,
+    strictPort: true,
+  },
   root: path.resolve(import.meta.dirname),
   build: {
     outDir: path.resolve(import.meta.dirname, "dist"),
